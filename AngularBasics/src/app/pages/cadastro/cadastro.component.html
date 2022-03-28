@@ -2,4 +2,8 @@
 <button [disabled]="disabledButton" (click)="alterarTexto()">Alterar Texto</button>
 <br>
 <input type="text" [(ngModel)]="nome">
-<p>{{ nome }}</p>
+<p *ngIf="nome == 'Renan'; else paragrafoElse">{{ nome }}</p>
+<ng-template #paragrafoElse>
+    <p>--- {{ nome }}</p>
+</ng-template>
+<!-- <p *ngIf="!(nome == 'Renan')"> --- {{ nome }}</p> -->
