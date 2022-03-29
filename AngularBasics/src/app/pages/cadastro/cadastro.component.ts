@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  texto = "Texto do componente";
-  disabledButton = false;
+  @Output('salvarNomeAlias') salvarNome: EventEmitter<string> = new EventEmitter<string>()
+
+  // texto = "Texto do componente";
+  // disabledButton = false;
   nome = "";
 
   constructor() { }
@@ -17,10 +19,15 @@ export class CadastroComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  alterarTexto() {
-    this.texto = "Novo texto do componente";
-    this.nome = "Renan";
-    this.disabledButton = true;
+  // alterarTexto() {
+  // this.texto = "Novo texto do componente";
+  // this.nome = "Renan";
+  // this.disabledButton = true;
+  // }
+
+  salvar() {
+    console.log(this.nome);
+    this.salvarNome.emit(this.nome);
   }
 
 }

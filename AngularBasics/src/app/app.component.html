@@ -1,5 +1,5 @@
 <div class="container pt-5">
     <h2>Meu primeiro App Angular</h2>
-    <app-cadastro></app-cadastro>
+    <app-cadastro (salvarNomeAlias)="salvar($event)"></app-cadastro>
     <app-lista [listaNomes]="nomes"></app-lista>
 </div>

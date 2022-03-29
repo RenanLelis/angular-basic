@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  nomes = ["Renan", "Fulano", "José", "João", "Pedro", "Beltrano"]
+  nomes: string[] = []
+
+  salvar(nome: string) {
+    this.nomes.push(nome);
+  }
 
 }
