@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-
+  nomes = ["Renan", "Fulano", "José", "João", "Pedro", "Beltrano"]
 
 }
