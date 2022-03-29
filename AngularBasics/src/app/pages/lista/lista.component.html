@@ -1,5 +1,12 @@
 <ul class="list-group list-group-flush">
     <li class="list-group-item" *ngFor="let nome of nomes;let i = index" [ngClass]="{'bg-cinza': i % 2 != 0}">
-        <p [ngStyle]="{color: getCor(i)}"> {{ i }} - {{ nome }}</p>
+        <!-- <p [ngStyle]="{color: getCor(i)}"> {{ i }} - {{ nome }}</p> -->
+        <!-- <div [ngSwitch]="nome">
+            <p *ngSwitchCase="'Renan'">Olá Renan</p>
+            <p *ngSwitchCase="'João'">Seja Bem vindo João</p>
+            <p *ngSwitchCase="'José'">Seja Bem vindo José</p>
+            <p *ngSwitchDefault> {{ i }} - {{ nome }}</p>
+        </div> -->
+        <p> {{ i }} - {{ nome }}</p>
     </li>
 </ul>

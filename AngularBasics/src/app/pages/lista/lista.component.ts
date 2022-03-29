@@ -14,11 +14,11 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getCor(i: number) {
-    if (i % 2 == 0) {
-      return 'blue';
-    }
-    return 'black';
-  }
+  // getCor(i: number) {
+  //   if (i % 2 == 0) {
+  //     return 'blue';
+  //   }
+  //   return 'black';
+  // }
 
 }
