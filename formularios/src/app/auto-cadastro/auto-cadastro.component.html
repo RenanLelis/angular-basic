@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Formulário Template Driven</h1>
+    <form (submit)="enviar()" #formSignup="ngForm">
+        <div class="mb-3">
+            <label for="inputNome" class="form-label">Nome</label>
+            <input type="text" #nome="ngModel" required name="nome" ngModel class="form-control" id="inputNome">
+            <p *ngIf="nome.invalid && nome.touched">Preencha corretamente o campo nome</p>
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" required email name="email" ngModel class="form-control" id="inputEmail">
+        </div>
+        <div class="mb-3">
+            <label for="inputSenha" class="form-label">Senha</label>
+            <input type="password" name="senha" ngModel class="form-control" id="inputSenha">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+    </form>
+</div>
